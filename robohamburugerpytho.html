@@ -1,0 +1,22 @@
+
+<div id="iframe-wrapper" role="region" aria-label="Anúncio fixo">
+  <button id="close-btn" aria-label="Fechar anúncio">×</button>
+  <iframe
+    id="iframe-fixo"
+    src="https://remarkable-gelato-4db597.netlify.app/modeloanuncio.html"
+    title="Anúncio Fixo Responsivo"
+    loading="lazy"
+    ></iframe>
+</div>
+
+<script>
+  // Espera 10 segundos para exibir o botão de fechar
+  setTimeout(() => {
+    document.getElementById("close-btn").style.display = "block";
+  }, 10000);
+
+  // Ação do botão para fechar o iframe
+  document.getElementById("close-btn").addEventListener("click", () => {
+    document.getElementById("iframe-wrapper").style.display = "none";
+  });
+</script>
