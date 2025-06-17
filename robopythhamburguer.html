@@ -1,4 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulação de Robô Montador de Hambúrguer - Python</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    main {
+      padding: 20px;
+    }
+    code {
+      display: block;
+      background-color: #2e2e2e;
+      color: #f8f8f8;
+      padding: 15px;
+      border-radius: 5px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+    
+    #iframe-wrapper {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      max-width: 400px;
+      height: 50vh; /* Altura relativa no desktop */
+      max-height: 400px;
+      z-index: 9999;
+      border-radius: 10px 0 0 0;
+      box-shadow: -2px -2px 12px rgba(0,0,0,0.3);
+      background-color: #fff;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
+    #iframe-fixo {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 10px 0 0 0;
+      display: block;
+    }
+
+    #close-btn {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      font-size: 20px;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      line-height: 32px;
+      text-align: center;
+      z-index: 10000;
+      display: none; /* Escondido inicialmente */
+      transition: background-color 0.3s ease;
+    }
+
+    #close-btn:hover {
+      background: rgba(255, 0, 0, 0.8);
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      #iframe-wrapper {
+        max-width: 100%;
+        height: 400px; /* Altura fixa menor */
+        border-radius: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      #iframe-fixo {
+        border-radius: 0;
+      }
+
+      #close-btn {
+        top: 6px;
+        right: 8px;
+        width: 28px;
+        height: 28px;
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Simulação de Robô Montador de Hambúrguer - Python</h1>
+  </header>
+  <main>
+    <h2>Código em Python</h2>
+    <code>
+class RoboHamburguer:
+    def preparar_hamburguer(self):
+        print("Iniciando a preparação do hambúrguer...")
+        self.adicionar_pao()
+        self.adicionar_carne()
+        self.adicionar_queijo()
+        self.adicionar_verduras()
+        self.fechar_hamburguer()
+
+    def adicionar_pao(self):
+        print("Adicionando pão...")
+
+    def adicionar_carne(self):
+        print("Adicionando carne...")
+
+    def adicionar_queijo(self):
+        print("Adicionando queijo...")
+
+    def adicionar_verduras(self):
+        print("Adicionando alface e tomate...")
+
+    def fechar_hamburguer(self):
+        print("Fechando o hambúrguer...")
+
+if __name__ == "__main__":
+    robo = RoboHamburguer()
+    robo.preparar_hamburguer()
+    </code>
+  </main>
+  
 <div id="iframe-wrapper" role="region" aria-label="Anúncio fixo">
   <button id="close-btn" aria-label="Fechar anúncio">×</button>
   <iframe
@@ -20,3 +164,6 @@
     document.getElementById("iframe-wrapper").style.display = "none";
   });
 </script>
+
+</body>
+</html>
