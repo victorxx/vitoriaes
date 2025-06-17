@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notícias de Guarapari (1988–2025) - Atualizações e Informações</title>
+  <meta name="description" content="Confira as principais notícias de Guarapari de 1988 até 2025. Informações completas, fontes confiáveis e atualizadas sobre a cidade capixaba." />
+  <meta name="keywords" content="Guarapari, notícias Guarapari, Guarapari 2025, história Guarapari, notícias ES, notícias Espírito Santo" />
+  <meta name="author" content="Seu Nome ou Marca" />
+  
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+        #iframe-wrapper {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      max-width: 400px;
+      height: 50vh; /* Altura relativa no desktop */
+      max-height: 400px;
+      z-index: 9999;
+      border-radius: 10px 0 0 0;
+      box-shadow: -2px -2px 12px rgba(0,0,0,0.3);
+      background-color: #fff;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #iframe-fixo {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 10px 0 0 0;
+      display: block;
+    }
+
+    #close-btn {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      font-size: 20px;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      line-height: 32px;
+      text-align: center;
+      z-index: 10000;
+      display: none; /* Escondido inicialmente */
+      transition: background-color 0.3s ease;
+    }
+
+    #close-btn:hover {
+      background: rgba(255, 0, 0, 0.8);
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      #iframe-wrapper {
+        max-width: 100%;
+        height: 400px; /* Altura fixa menor */
+        border-radius: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      #iframe-fixo {
+        border-radius: 0;
+      }
+
+      #close-btn {
+        top: 6px;
+        right: 8px;
+        width: 28px;
+        height: 28px;
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #007acc;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    section h2 {
+      color: #007acc;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      font-size: 1.75rem;
+      border-bottom: 2px solid #007acc;
+      padding-bottom: 0.5rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+    thead {
+      background-color: #007acc;
+      color: white;
+    }
+    th, td {
+      padding: 0.75rem 1rem;
+      border: 1px solid #ddd;
+      text-align: left;
+      vertical-align: top;
+    }
+    tbody tr:nth-child(even) {
+      background-color: #f3f9ff;
+    }
+    a {
+      color: #005fa3;
+      text-decoration: none;
+    }
+    a:hover, a:focus {
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+      tr {
+        margin-bottom: 1.25rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 0.75rem;
+      }
+      td {
+        border: none;
+        padding-left: 50%;
+        position: relative;
+        text-align: right;
+      }
+      td::before {
+        position: absolute;
+        top: 0.75rem;
+        left: 1rem;
+        width: 45%;
+        padding-right: 1rem;
+        white-space: nowrap;
+        font-weight: 600;
+        text-align: left;
+        content: attr(data-label);
+        color: #007acc;
+      }
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 1rem 0;
+      color: #555;
+      border-top: 1px solid #ddd;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Notícias de Guarapari (1988–2025)</h1>
+    <p>Atualizações e informações completas sobre Guarapari, Espírito Santo</p>
+  </header>
+
+  <main>
+    <section id="noticias-guarapari">
+      <h2>📰 Principais Notícias de Guarapari</h2>
+      <table aria-label="Tabela com notícias de Guarapari de 1988 até 2025">
+        <thead>
+          <tr>
+            <th scope="col">Data</th>
+            <th scope="col">Título</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Fonte</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Data">11/09/2024</td>
+            <td data-label="Título">Guarapari é reconhecida como capital nacional da biodiversidade marinha</td>
+            <td data-label="Descrição">Projeto de lei aprovado no Senado destaca a rica biodiversidade marinha da cidade.</td>
+            <td data-label="Fonte"><a href="https://www12.senado.leg.br/noticias/materias/2024/09/11/guarapari-es-como-a-capital-nacional-da-biodiversidade-marinha-vai-a-sancao" target="_blank" rel="noopener noreferrer">Leia mais</a></td>
+          </tr>
+          <tr>
+            <td data-label="Data">19/03/2025</td>
+            <td data-label="Título">Seleção Brasileira de Basquete treina em Guarapari para Americup 2025</td>
+            <td data-label="Descrição">Equipe ficará hospedada e treinará no SESC Guarapari entre 4 e 18 de agosto.</td>
+            <td data-label="Fonte"><a href="https://www.folhaonline.es/noticias-de-guarapari/guarapari-recebera-selecao-brasileira-de-basquete-para-preparacao-rumo-a-americup-2025/" target="_blank" rel="noopener noreferrer">Leia mais</a></td>
+          </tr>
+          <div id="iframe-wrapper" role="region" aria-label="Anúncio fixo">
+  <button id="close-btn" aria-label="Fechar anúncio">×</button>
+  <iframe
+    id="iframe-fixo"
+    src="https://remarkable-gelato-4db597.netlify.app/modeloanuncio.html"
+    title="Anúncio Fixo Responsivo"
+    loading="lazy"
+    ></iframe>
+</div>
+
+<script>
+  // Espera 10 segundos para exibir o botão de fechar
+  setTimeout(() => {
+    document.getElementById("close-btn").style.display = "block";
+  }, 10000);
+
+  // Ação do botão para fechar o iframe
+  document.getElementById("close-btn").addEventListener("click", () => {
+    document.getElementById("iframe-wrapper").style.display = "none";
+  });
+</script>
+
+          <tr>
+            <td data-label="Data">19/03/2025</td>
+            <td data-label="Título">Prefeitura regulamenta comprovação de posse de imóveis com novo decreto</td>
+            <td data-label="Descrição">Novas regras facilitam emissão de documentos como alvarás e licenças.</td>
+            <td data-label="Fonte"><a href="https://www.folhaonline.es/noticias-de-guarapari/prefeitura-de-guarapari-regulamenta-comprovacao-de-posse-de-imoveis-com-novo-decreto/" target="_blank" rel="noopener noreferrer">Leia mais</a></td>
+          </tr>
+          <tr>
+            <td data-label="Data">18/03/2025</td>
+            <td data-label="Título">Circuito de Mountain Bike atrai mais de 300 atletas a Guarapari</td>
+            <td data-label="Descrição">Evento movimenta o comércio local com premiação e participação recorde.</td>
+            <td data-label="Fonte"><a href="https://www.folhaonline.es/noticias-de-guarapari/guarapari-recebe-circuito-de-mountain-bike-com-expectativa-de-recorde-de-participantes/" target="_blank" rel="noopener noreferrer">Leia mais</a></td>
+          </tr>
+          <tr>
+            <td data-label="Data">17/03/2025</td>
+            <td data-label="Título">Procon divulga lista de empresas mais reclamadas em Guarapari</td>
+            <td data-label="Descrição">Principais problemas: cobranças indevidas e descumprimento de contratos.</td>
+            <td data-label="Fonte"><a href="https://www.folhaonline.es/noticias-de-guarapari/procon-guarapari-divulga-lista-de-empresas-que-mais-receberam-reclamacoes-dos-consumidores/" target="_blank" rel="noopener noreferrer">Leia mais</a></td>
+          </tr>
+          <tr>
+            <td data-label="Data">17/03/2025</td>
+            <td data-label="Título">Inmet emite alerta amarelo para chuvas intensas em Guarapari</td>
+            <td data-label="Descrição">Previsão: até 50 mm/dia e ventos de até 60 km/h.</td>
+            <td data-label="Fonte"><a href="https://www.folhaonline.es/noticias-de-guarapari/inmet-emite-alerta-amarelo-para-chuvas-intensas-em-guarapari/" target="_blank" rel="noopener noreferrer">Leia mais</a></td>
+          </tr>
+          <tr>
+            <td data-label="Data">19/03/2025</td>
+            <td data-label="Título">Governo do ES entrega obras de saneamento e saúde em Guarapari</td>
+            <td data-label="Descrição">Investimento de R$ 48,6 milhões em estações de tratamento e serviços.</td>
+            <td data-label="Fonte"><a href="https://www.es.gov.br/Noticia/governo-do-estado-entrega-obras-e-servicos-na-area-de-saneamento-e-saude-em-guarapari" target="_blank" rel="noopener noreferrer">Leia mais</a></td>
+          </tr>
+          <tr>
+            <td data-label="Data">19/09/2024</td>
+            <td data-label="Título">TV Guarapari completa 26 anos e anuncia novos projetos</td>
+            <td data-label="Descrição">Emissora local prepara nova era na programação regional.</td>
+            <td data-label="Fonte"><a href="https://tvguarapari.com/tv-guarapari-completa-26-anos-e-se-prepara-para-o-comeco-de-um-nova-era/" target="_blank" rel="noopener noreferrer">Leia mais</a></td>
+          </tr>
+          <tr>
+            <td data-label="Data">28/09/2021</td>
+            <td data-label="Título">Prefeitura convoca ambulantes para recadastramento obrigatório</td>
+            <td data-label="Descrição">Prazo para atualização cadastral termina em novembro de 2021.</td>
+            <td data-label="Fonte"><a href="https://www.folhaonline.es/noticias-de-guarapari/prefeitura-convoca-ambulantes-para-recadastramento-obrigatorio-em-guarapari/" target="_blank" rel="noopener noreferrer">Leia mais</a></td>
+          </tr>
+          <tr>
+            <td data-label="Data">15/07/2019</td>
+            <td data-label="Título">Guarapari anuncia obras de revitalização do centro comercial</td>
+            <td data-label="Descrição">Projeto prevê melhorias na infraestrutura urbana e mobilidade.</td>
+            <td data-label="Fonte"><a href="https://www.folhaonline.es/noticias-de-guarapari/guarapari-anuncia-obras-de-revitalizacao-do-centro-comercial/" target="_blank" rel="noopener noreferrer">Leia mais</a></td>
+          </tr>
+          <tr>
+            <td data-label="Data">12/12/2018</td>
+            <td data-label="Título">Festival gastronômico atrai turistas e movimenta a economia local</td>
+            <td data-label="Descrição">Evento com pratos típicos e atrações culturais acontece anualmente.</td>
+            <td data-label="Fonte"><a href="https://www.folhaonline.es/noticias-de-guarapari/festival-gastronomico-de-guarapari-movimenta-a-economia-da-regiao/" target="_blank" rel="noopener noreferrer">Leia mais</a></td>
+          </tr>
+          <tr>
+            <td data-label="Data">04/08/2017</td>
+            <td data-label="Título">Guarapari recebe investimentos em energia renovável</td>
+            <td data-label="Descrição">Projeto piloto de energia solar para prédios públicos.</td>
+            <td data-label="Fonte"><a href="https://www.folhaonline.es/noticias-de-guarapari/guarapari-recebe-investimentos-em-energia-renovavel/" target="_blank" rel="noopener noreferrer">Leia mais</a></td>
+          </tr>
+          <tr>
+            <td data-label="Data">22/11/2015</td>
+            <td data-label="Título">Projeto de preservação ambiental ganha destaque nacional</td>
+            <td data-label="Descrição">Iniciativa local para proteção de manguezais recebe prêmio.</td>
+            <td data-label="Fonte"><a href="https://www.folhaonline.es/noticias-de-guarapari/projeto-de-preservacao-ambiental-de-guarapari-e-reconhecido-nacionalmente/" target="_blank" rel="noopener noreferrer">Leia mais</a></td>
+          </tr>
+          <tr>
+            <td data-label="Data">18/04/2014</td>
+            <td data-label="Título">Guarapari investe em turismo sustentável</td>
+            <td data-label="Descrição">Capacitação de guias e melhorias em trilhas ecológicas.</td>
+            <td data-label="Fonte"><a href="https://www.folhaonline.es/noticias-de-guarapari/guarapari-investe-em-turismo-sustentavel-para-dinamizar-a-regiao/" target="_blank" rel="noopener noreferrer">Leia mais</a></td>
+          </tr>
+          <tr>
+            <td data-label="Data">10/01/2010</td>
+            <td data-label="Título">Inauguração do Hospital Municipal de Guarapari</td>
+            <td data-label="Descrição">Unidade hospitalar amplia atendimento na região.</td>
+            <td data-label="Fonte"><a href="https://www.folhaonline.es/noticias-de-guarapari/inauguracao-do-hospital-municipal-de-guarapari/" target="_blank" rel="noopener noreferrer">Leia mais</a></td>
+          </tr>
+          <tr>
+            <td data-label="Data">28/07/2005</td>
+            <td data-label="Título">Guarapari recebe campeonato estadual de vôlei de praia</td>
+            <td data-label="Descrição">Evento esportivo movimenta a orla local.</td>
+            <td data-label="Fonte"><a href="https://www.folhaonline.es/noticias-de-guarapari/guarapari-recebe-campeonato-estadual-de-volei-de-praia/" target="_blank" rel="noopener noreferrer">Leia mais</a></td>
+          </tr>
+          <tr>
+            <td data-label="Data">16/02/1999</td>
+            <td data-label="Título">Criação da Reserva Ambiental do Morro do Moreno</td>
+            <td data-label="Descrição">Medida protege áreas de mata atlântica na cidade.</td>
+            <td data-label="Fonte"><a href="https://www.folhaonline.es/noticias-de-guarapari/criacao-da-reserva-ambiental-do-morro-do-moreno-em-guarapari/" target="_blank" rel="noopener noreferrer">Leia mais</a></td>
+          </tr>
+          <tr>
+            <td data-label="Data">15/06/1988</td>
+            <td data-label="Título">Guarapari recebe grandes investimentos no setor turístico</td>
+            <td data-label="Descrição">Início da expansão hoteleira e desenvolvimento do litoral.</td>
+            <td data-label="Fonte"><a href="https://www.folhaonline.es/noticias-de-guarapari/investimentos-no-setor-turistico-impulsionam-guarapari-na-decada-de-1980/" target="_blank" rel="noopener noreferrer">Leia mais</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Notícias Guarapari. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
