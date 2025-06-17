@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Linha do tempo com todas as atualizações, eventos e novidades do Clash of Clans desde seu lançamento até hoje. Fique por dentro do universo CoC." />
+  <meta name="keywords" content="Clash of Clans, linha do tempo Clash, atualizações Clash of Clans, eventos Clash of Clans, Supercell" />
+  <meta name="author" content="saibvix">
+  <title>Linha do Tempo do Clash of Clans</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3f3f3;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #4c1e8c;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+    #iframe-wrapper {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      max-width: 400px;
+      height: 50vh; /* Altura relativa no desktop */
+      max-height: 400px;
+      z-index: 9999;
+      border-radius: 10px 0 0 0;
+      box-shadow: -2px -2px 12px rgba(0,0,0,0.3);
+      background-color: #fff;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #iframe-fixo {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 10px 0 0 0;
+      display: block;
+    }
+
+    #close-btn {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      font-size: 20px;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      line-height: 32px;
+      text-align: center;
+      z-index: 10000;
+      display: none; /* Escondido inicialmente */
+      transition: background-color 0.3s ease;
+    }
+
+    #close-btn:hover {
+      background: rgba(255, 0, 0, 0.8);
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      #iframe-wrapper {
+        max-width: 100%;
+        height: 400px; /* Altura fixa menor */
+        border-radius: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      #iframe-fixo {
+        border-radius: 0;
+      }
+
+      #close-btn {
+        top: 6px;
+        right: 8px;
+        width: 28px;
+        height: 28px;
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+
+    .timeline {
+      position: relative;
+      margin: 20px 0;
+      padding-left: 30px;
+      border-left: 4px solid #4c1e8c;
+    }
+
+    .event {
+      margin-bottom: 25px;
+    }
+
+    .event h3 {
+      margin: 0;
+      color: #4c1e8c;
+    }
+
+    .event p {
+      margin: 5px 0 10px 0;
+    }
+
+    .event a {
+      color: #4c1e8c;
+      text-decoration: none;
+    }
+
+    .event a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        margin: 10px;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Linha do Tempo - Clash of Clans</h1>
+    <p>Principais atualizações, recursos e eventos desde o início até hoje</p>
+  </header>
+
+  <main>
+    <section class="timeline">
+
+      <div class="event">
+        <h3>Agosto de 2012 – Lançamento Oficial</h3>
+        <p>Clash of Clans é lançado mundialmente para iOS pela Supercell.</p>
+      </div>
+
+      <div class="event">
+        <h3>Outubro de 2013 – Chega ao Android</h3>
+        <p>Clash of Clans finalmente disponível para dispositivos Android.</p>
+      </div>
+
+      <div class="event">
+        <h3>Maio de 2017 – Base do Construtor</h3>
+        <p>Adição de uma segunda vila com herói próprio e mecânicas diferentes.</p>
+      </div>
+
+<div id="iframe-wrapper" role="region" aria-label="Anúncio fixo">
+  <button id="close-btn" aria-label="Fechar anúncio">×</button>
+  <iframe
+    id="iframe-fixo"
+    src="https://remarkable-gelato-4db597.netlify.app/modeloanuncio.html"
+    title="Anúncio Fixo Responsivo"
+    loading="lazy"
+    ></iframe>
+</div>
+
+<script>
+  // Espera 10 segundos para exibir o botão de fechar
+  setTimeout(() => {
+    document.getElementById("close-btn").style.display = "block";
+  }, 10000);
+
+  // Ação do botão para fechar o iframe
+  document.getElementById("close-btn").addEventListener("click", () => {
+    document.getElementById("iframe-wrapper").style.display = "none";
+  });
+</script>
+
+      <div class="event">
+        <h3>Outubro de 2022 – Capital do Clã</h3>
+        <p>Nova modalidade cooperativa onde clãs constroem e atacam capitais inimigas.</p>
+      </div>
+
+      <div class="event">
+        <h3>Fevereiro de 2025 – Equipamentos de Heróis & Aprendiz de Construtor</h3>
+        <p>Nova mecânica de equipamentos balanceáveis e robô auxiliar de construção.</p>
+        <a href="https://supercell.com/en/games/clashofclans/pt/blog/release-notes/notas-completas-da-atualizacao-de-junho/" target="_blank">Leia mais</a>
+      </div>
+
+      <div class="event">
+        <h3>Junho de 2025 – Super Hog Rider & Itens Mágicos Novos</h3>
+        <p>Nova super tropa dividida em duas unidades e poções inéditas.</p>
+        <a href="https://www.esports.net/news/mobile-games/clash-of-clans-patch-notes/" target="_blank">Leia mais</a>
+      </div>
+
+      <div class="event">
+        <h3>Eventos Contínuos – Clashamania, Mundial CoC, Skins Exclusivas</h3>
+        <p>Skins WWE, novos desafios mensais e classificatórias do torneio mundial.</p>
+        <a href="https://www.zoomgames.com.br/2025/01/12/clash-of-clans-world-championship/" target="_blank">Leia mais</a>
+      </div>
+
+      <div class="event">
+        <h3>Mais em breve...</h3>
+        <p>Esta linha do tempo será atualizada com cada novo patch!</p>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+
+  </footer>
+</body>
+</html>
